@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>황금동전 - 프론트엔드 개발자 이력서</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Custom scrollbar - light theme */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f5f4f0;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #999999;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #666666;
+        }
+
+        /* Selection color */
+        ::selection {
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+
+        body {
+            background: #f5f4f0;
+            color: #1a1a1a;
+        }
+
+        .resume-label {
+            font-size: 0.875rem;
+            color: #666666;
+            font-weight: 500;
+        }
+
+        .section-label {
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #999999;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 1.5rem;
+        }
+
+        .item-title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 0.25rem;
+        }
+
+        .item-date {
+            font-size: 0.75rem;
+            color: #999999;
+            margin-bottom: 0.5rem;
+        }
+
+        .item-description {
+            font-size: 0.875rem;
+            color: #666666;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+
+        .divider {
+            border-top: 1px solid #e0e0e0;
+            margin: 2rem 0;
+        }
+
+        .email-highlight {
+            background: #1a1a1a;
+            color: #ffffff;
+            padding: 0.5rem 0.75rem;
+            font-size: 0.875rem;
+            display: inline-block;
+            margin-bottom: 0.5rem;
+        }
+
+        .progress-bar-container {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .progress-bar {
+            flex: 1;
+            height: 6px;
+            background: #e0e0e0;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: #1a1a1a;
+            border-radius: 3px;
+        }
+
+        .progress-label {
+            font-size: 0.75rem;
+            color: #999999;
+            min-width: 35px;
+            text-align: right;
+        }
+
+        .skill-name {
+            font-size: 0.875rem;
+            color: #1a1a1a;
+            min-width: 70px;
+        }
+
+        .project-item {
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .project-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .project-title {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-year {
+            font-size: 0.75rem;
+            color: #999999;
+        }
+
+        .project-description {
+            font-size: 0.875rem;
+            color: #666666;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .main-name {
+                font-size: 3rem;
+            }
+
+            .page-container {
+                padding: 1.5rem;
+            }
+
+            .columns-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .main-name {
+                font-size: 4.5rem;
+            }
+
+            .page-container {
+                padding: 3rem;
+            }
+
+            .columns-grid {
+                display: grid;
+                grid-template-columns: 25% 40% 35%;
+                gap: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-container">
+        <!-- Header -->
+        <div class="mb-8">
+            <p class="resume-label">Resume</p>
+            <h1 class="main-name font-black mb-4" style="font-weight: 800; letter-spacing: -0.02em;">황금동전</h1>
+            <div class="divider"></div>
+        </div>
+
+        <!-- Main 3-Column Content -->
+        <div class="columns-grid">
+
+            <!-- Left Column: Personal Info (25%) -->
+            <div>
+                <div class="section-label">About</div>
+
+                <!-- Info Table -->
+                <div class="space-y-4 mb-8">
+                    <div>
+                        <div class="text-xs tracking-widest text-gray-400 uppercase font-semibold mb-1">Experience</div>
+                        <div class="item-description">30년차</div>
+                    </div>
+                    <div>
+                        <div class="text-xs tracking-widest text-gray-400 uppercase font-semibold mb-1">Speciality</div>
+                        <div class="item-description">Backend Development</div>
+                    </div>
+                    <div>
+                        <div class="text-xs tracking-widest text-gray-400 uppercase font-semibold mb-1">Bio</div>
+                        <div class="item-description">웹을 사랑하는 30년차 백엔드엔드 개발자입니다. 사용자 경험을 최우선으로 생각하며, 깔끔하고 유지보수 쉬운 코드를 추구합니다. 새로운 기술을 탐구하고 팀과 함께 성장하는 것을 즐깁니다.</div>
+                    </div>
+                </div>
+
+                <!-- Contact -->
+                <div class="section-label mt-8">Contact</div>
+                <div>
+                    <div class="email-highlight">hong@example.com</div>
+                    <div class="mt-3">
+                        <div class="text-xs tracking-widest text-gray-400 uppercase font-semibold mb-1">GitHub</div>
+                        <a href="https://github.com/honggildong" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-600 hover:text-gray-800 break-all">github.com/honggildong</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Center Column: Career & Skills (40%) -->
+            <div>
+                <!-- Career Section -->
+                <div class="section-label">Career</div>
+                <div class="space-y-4 mb-10">
+                    <div>
+                        <div class="item-title">프리랜서 백엔드</div>
+                        <div class="item-date">2022.03 ~ 현재</div>
+                        <div class="item-description">개인 프로젝트 및 클라이언트 웹개발 진행 중</div>
+                    </div>
+                    <div>
+                        <div class="item-title">스타트업 인턴</div>
+                        <div class="item-date">2021.01 ~ 2022.02</div>
+                        <div class="item-description">팀 프로젝트에서 프론트엔드 개발 담당</div>
+                    </div>
+                </div>
+
+                <!-- Tools/Skills Section -->
+                <div class="section-label mt-8">Tools</div>
+                <div class="space-y-3">
+                    <!-- HTML/CSS -->
+                    <div class="progress-bar-container">
+                        <div class="skill-name">HTML/CSS</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 95%"></div>
+                        </div>
+                        <div class="progress-label">95%</div>
+                    </div>
+
+                    <!-- JavaScript -->
+                    <div class="progress-bar-container">
+                        <div class="skill-name">JavaScript</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 90%"></div>
+                        </div>
+                        <div class="progress-label">90%</div>
+                    </div>
+
+                    <!-- React -->
+                    <div class="progress-bar-container">
+                        <div class="skill-name">React</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 85%"></div>
+                        </div>
+                        <div class="progress-label">85%</div>
+                    </div>
+
+                    <!-- TypeScript -->
+                    <div class="progress-bar-container">
+                        <div class="skill-name">TypeScript</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 75%"></div>
+                        </div>
+                        <div class="progress-label">75%</div>
+                    </div>
+
+                    <!-- Node.js -->
+                    <div class="progress-bar-container">
+                        <div class="skill-name">Node.js</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 65%"></div>
+                        </div>
+                        <div class="progress-label">65%</div>
+                    </div>
+
+                    <!-- Git -->
+                    <div class="progress-bar-container">
+                        <div class="skill-name">Git</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 80%"></div>
+                        </div>
+                        <div class="progress-label">80%</div>
+                    </div>
+
+                    <!-- Figma -->
+                    <div class="progress-bar-container">
+                        <div class="skill-name">Figma</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 70%"></div>
+                        </div>
+                        <div class="progress-label">70%</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Projects (35%) -->
+            <div>
+                <div class="section-label">Projects</div>
+
+                <!-- Project 1: TodoMaster -->
+                <div class="project-item">
+                    <div class="project-title">
+                        <span>TodoMaster</span>
+                        <span class="project-year">2024</span>
+                    </div>
+                    <div class="project-description">React + TypeScript로 만든 투두 앱. 로컬스토리지 저장, 드래그&드롭 지원.</div>
+                </div>
+
+                <!-- Project 2: WeatherNow -->
+                <div class="project-item">
+                    <div class="project-title">
+                        <span>WeatherNow</span>
+                        <span class="project-year">2024</span>
+                    </div>
+                    <div class="project-description">OpenWeather API 연동 날씨 앱. 위치 기반 자동 탐지, 5일 예보.</div>
+                </div>
+
+                <!-- Project 3: DevBlog -->
+                <div class="project-item">
+                    <div class="project-title">
+                        <span>DevBlog</span>
+                        <span class="project-year">2023</span>
+                    </div>
+                    <div class="project-description">Node.js + Express 기반 개인 기술 블로그. 마크다운 지원, 태그 필터링.</div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="divider mt-12"></div>
+        <div class="text-center mt-8 mb-12">
+            <div class="flex justify-center gap-6">
+                <a href="mailto:hong@example.com" class="text-sm text-gray-600 hover:text-gray-800">Email</a>
+                <a href="https://github.com/honggildong" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-600 hover:text-gray-800">GitHub</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
